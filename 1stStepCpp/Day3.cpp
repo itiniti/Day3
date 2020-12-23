@@ -1,6 +1,7 @@
 #include <iostream>
-#include "employeestruct.h"
 using namespace std;
+
+
 
 int main(void) {
 	struct Employee {
@@ -8,8 +9,13 @@ int main(void) {
 		char lastInitial;
 		int employeeNumber;
 		int salary;
+		void print()//êµ¬ì¡°ì²´ ë‚´ë¶€ì— print í•¨ìˆ˜ 
+		{
+				cout << "Employee : " << firstInitial << lastInitial << endl << "Number : " << employeeNumber << endl << "Salary : " << salary << endl << endl;
+		}
 	};
-	//±¸Á¶Ã¼ ¿¹½Ã / »ç¾÷Àå¿¡¼­ °í¿ëÀÎ¿¡ ´ëÇÑ Á¤º¸¸¦ ±¸Á¶Ã¼ ¹æ½ÄÀ¸·Î Ç¥Çö
+	
+	//ì‚¬ì—…ì¥ì—ì„œ ê³ ìš©ì¸ì— ëŒ€í•œ ì •ë³´ë¥¼ êµ¬ì¡°ì²´ ë°©ì‹ìœ¼ë¡œ í‘œí˜„
 	Employee anEmployee;
 	anEmployee.firstInitial = 'M';
 	anEmployee.lastInitial = 'G';
@@ -22,20 +28,10 @@ int main(void) {
 	anotEmployee.employeeNumber = 97;
 	anotEmployee.salary = 100000;
 
-	//±¸Á¶Ã¼ Ãâ·Â È®ÀÎ
-	cout << "Employee : " << anEmployee.firstInitial << anEmployee.lastInitial << endl;
-	cout << "Number : " << anEmployee.employeeNumber << endl;
-	cout << "Salary : " << anEmployee.salary << endl;
-
-	cout << "Employee : " << anotEmployee.firstInitial << anotEmployee.lastInitial << endl;
-	cout << "Number : " << anotEmployee.employeeNumber << endl;
-	cout << "Salary : " << anotEmployee.salary << endl;
-
-	//±¸Á¶Ã¼ º¯¼ö °ª º¯È­ Ã¼Å©
-	anEmployee.employeeNumber += 42;
-	cout << "Number : " << anEmployee.employeeNumber << endl;//±¸Á¶Ã¼ ¾È¿¡ ÀÖ´Â º¯¼ö °ªÀº º¯È­°¡´É
-
-
-
+	//êµ¬ì¡°ì²´ ì¶œë ¥ í™•ì¸
+	
+	anEmployee.print();
+	anotEmployee.print();
+	
 
 }
